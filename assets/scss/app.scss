@@ -1,0 +1,54 @@
+/**
+ * Config
+ */
+@import "_config/font-faces";
+
+/**
+ * Tailwind imports
+ */
+@tailwind base;
+@tailwind preflight;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * Base
+ */
+@import "base/elements";
+@import "base/forms";
+@import "base/lists";
+@import "base/media";
+@import "base/tables";
+@import "base/text-formatting";
+
+/**
+ * Partials
+ */
+
+#wuploads_form {
+  .form-wrapper {
+    @apply flex flex-col gap-6 lg:gap-0 md:flex-row items-center justify-center w-full lg:w-max mx-auto p-5 bg-white drop-shadow-md rounded-lg;
+    fieldset {
+      @apply flex flex-col  justify-center w-full;
+      label {
+        @apply text-sm font-semibold;
+      }
+
+      input, select, .nice-select {
+        @apply mr-2.5 pl-0 outline-none rounded w-full lg:w-48 text-gray-500;
+      }
+
+      .nice-select {
+        @apply border-0 text-base h-auto;
+      }
+    }
+
+    input[type='submit'] {
+      @apply px-4 py-2 bg-yellow-400 text-white rounded border border-yellow-500 hover:bg-yellow-500 cursor-pointer transition-all;
+    }
+  }
+
+  #wuploads_result.active {
+    @apply bg-gray-800 text-white px-6 pt-8 pb-16 mt-8 rounded-lg;
+  }
+}

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>wuploads</title>
+    <link rel="icon" href="./dist/images/wuploads.svg">
+    <link rel="stylesheet" href="./dist/css/app.css">
+    <script src="./dist/js/app.js" defer></script>
+</head>
+<body>
+
+<div class="container py-32">
+    <form id="wuploads_form" x-data="WuploadForm">
+        <div class="form-wrapper">
+            <fieldset>
+                <label for="distantUrl">Distant URL</label>
+                <input type="url" name="distantUrl" id="distantUrl" placeholder="https://exemple.com" autofocus required>
+            </fieldset>
+            <fieldset>
+                <label for="localUrl">Local URL</label>
+                <input type="url" name="localUrl" id="localUrl" placeholder="https://exemple.local" required>
+            </fieldset>
+            <fieldset>
+                <label for="type">Type</label>
+                <select name="type" id="type" placeholder="Installation type" required  >
+                    <option value="classic">Classic</option>
+                    <option value="bedrock">Bedrock</option>
+                    <option value="themosis">Themosis</option>
+                </select>
+            </fieldset>
+            <input type="submit" value="Generate">
+        </div>
+
+        <pre id="wuploads_result" class="overflow-scroll lg:overflow-hidden"></pre>
+    </form>
+</div>
+
+</body>
+</html>
